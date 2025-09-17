@@ -5,10 +5,13 @@
   -webkit-tap-highlight-color: transparent;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 html,
 body {
   height: 100%;
-  overflow-x: hidden;
   position: relative;
 }
 
@@ -148,6 +151,19 @@ a {
   cursor: pointer;
 }
 
+.tournament {
+  display: flex;
+  flex-direction: column;
+}
+
+.tournament-people {
+  display: flex;
+}
+
+.stagestransformation {
+  display: grid;
+}
+
 .line-through {
   text-decoration: line-through red 2px;
 }
@@ -182,5 +198,22 @@ a {
   }
   100% {
     transform: translateX(-100%);
+  }
+}
+
+.tournament-people-info {
+  width: 100%;
+  animation: animation-tournament-people-info 0.5s ease-in-out;
+}
+
+.tournament-people-info {
+}
+
+@keyframes animation-tournament-people-info {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

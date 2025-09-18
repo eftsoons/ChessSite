@@ -158,7 +158,6 @@ a {
 
 .tournament-people {
   display: flex;
-  flex-direction: column;
 }
 
 .stagestransformation {
@@ -203,7 +202,11 @@ a {
 }
 
 .tournament-people-info {
+  width: 100%;
   animation: animation-tournament-people-info 0.5s ease-in-out;
+}
+
+.tournament-people-info {
 }
 
 @keyframes animation-tournament-people-info {

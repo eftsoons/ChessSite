@@ -181,3 +181,43 @@ function listpeoplerender(index) {
     divpeople.appendChild(div);
   }
 }
+
+function test() {
+  const funcs = [
+    (x) => Math.pow(x, 2) - 3 * x + 2, // 0.99993896484375
+    (x) => Math.pow(x, 3) + x - 1, // 0.68231201171875
+    (x) => Math.pow(Math.E, -x) - x, // 0.567138671875
+    (x) => Math.cos(x) - x, // 0.7391357421875
+  ];
+
+  return funcs.map((func) => {
+    let a = 0;
+    let b = 1;
+
+    const sigma = 0.0001;
+
+    let mid = a - (a - b) / 2;
+
+    for (let i = 0; i < 1000 && Math.abs(func(mid)) > sigma; i++) {
+      mid = a - (a - b) / 2;
+
+      //   console.log(
+      //     `${a} ${b} середина: ${mid} значение функции: ${func(mid)} шаг: ${
+      //       i + 1
+      //     }`
+      //   );
+
+      if (func(mid) * func(a) <= 0) {
+        b = mid;
+      } else {
+        a = mid;
+      }
+
+      mid = a - (a - b) / 2;
+    }
+
+    return { func: func, mid: mid };
+  });
+}
+
+console.log(test());

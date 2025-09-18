@@ -1,5 +1,30 @@
 @import url("./style.css");
 
+@media (min-width: 1024px) {
+  .button-support:hover {
+    background-color: var(--color-button-white);
+    color: var(--font-button-bg-black);
+  }
+
+  .button-info:hover {
+    color: var(--font-color);
+    background-color: var(--font-button-bg-black);
+  }
+
+  .tournament-people-button-list:hover {
+    background-color: var(--color-button-white);
+  }
+
+  .tournament-people-button-list:disabled {
+    background-color: var(--color-button-gray);
+  }
+
+  .tournament-people-button:hover {
+    background-color: var(--font-color-blue2);
+    color: var(--font-color);
+  }
+}
+
 @media (max-width: 1270px) {
   main {
     padding-inline: 40px;
@@ -49,6 +74,7 @@
   }
 
   .table-motivation-description {
+    width: 100%;
     gap: 20px;
     text-align: center;
   }
@@ -64,10 +90,12 @@
     --font-size-h4: 18px;
   }
 
-  .motivation-img {
-    width: 354px;
+  /* .motivation-img {
+    width: 344px;
     height: 200px;
-  }
+
+    clip-path: ellipse(147px 75px);
+  } */
 
   .header-text {
     h1 {
@@ -88,9 +116,9 @@
     --font-size-description: 16px;
   }
 
-  .motivation-img {
-    width: 304px;
-    height: 150px;
+  .stages-transformation-text2 {
+    flex-direction: column;
+    align-items: start;
   }
 }
 
@@ -99,7 +127,7 @@
     --font-size-normal: 16px;
     --font-size-h1: 25px;
     --font-size-h2: 18px;
-    --font-size-h3: 15px;
+    --font-size-h3: 18px;
     --font-size-button: 12px;
     --font-size-h4: 16px;
   }
@@ -126,12 +154,19 @@
   }
 
   .motivation-img {
-    width: 304px;
-    height: 150px;
+    width: 344px;
+    height: 200px;
+
+    clip-path: none;
+    border-radius: 16px;
   }
 
   .tournament-people-img {
     width: 150px;
+  }
+
+  .stages-transformation-text2 {
+    gap: 10px;
   }
 }
 
@@ -168,6 +203,7 @@
 
   .tournament {
     margin-top: 50px;
+    gap: 30px;
   }
 
   .tournament-people-button-list {
@@ -178,11 +214,16 @@
   .tournament-people-img {
     width: 100px;
   }
+
+  .stages-transformation-text2 {
+    gap: 5px;
+  }
 }
 
 @media (max-width: 500px) {
   body {
-    --font-size-normal2: 10px;
+    --font-size-normal2: 12px;
+    --font-size-h3: 15px;
   }
 
   .stages-transformation-container-text {
@@ -195,5 +236,14 @@
 
   .tournament-people-img {
     width: 80px;
+  }
+
+  .tournament-people-button {
+    padding: 10px;
+  }
+
+  .motivation-img {
+    width: 324px;
+    height: 180px;
   }
 }

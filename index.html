@@ -71,13 +71,11 @@
                 </p>
               </div>
               <div class="flex gap-[16px]">
-                <button class="bg-(--font-button-bg-black) w-full">
+                <button class="button-support">
                   <p>Поддержать</p>
                   <p>шахматную мысль</p>
                 </button>
-                <button
-                  class="border-[2px] border-solid border-(--font-color-black) text-(--font-color-black)! w-full"
-                >
+                <button class="button-info">
                   <p>Подробнее</p>
                   <p>о турнире</p>
                 </button>
@@ -240,7 +238,7 @@
             <a>По всем вопросам обращаться в администрацию к К. Михельсону</a>
           </div>
         </div>
-        <div class="flex flex-col gap-[50px]">
+        <div class="flex flex-col gap-[50px] w-full">
           <div data-aos="fade-up" data-aos-anchor-placement="center-bottom">
             <h2>Этапы преображения</h2>
             <div class="stages-transformation-text2">
@@ -361,6 +359,7 @@
             >
               <button
                 class="tournament-people-button-list"
+                id="tournament-people-button-list-prev"
                 onclick="listpeopleprev()"
               >
                 <svg
@@ -388,6 +387,7 @@
               </div>
               <button
                 class="tournament-people-button-list"
+                id="tournament-people-button-list-next"
                 onclick="listpeoplenext()"
               >
                 <svg

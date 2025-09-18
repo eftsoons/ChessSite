@@ -1,5 +1,11 @@
 const divpeople = document.querySelector(".tournament-people");
 const peopleinfolist = document.querySelector(".tournament-people-info-list");
+const buttonprev = document.querySelector(
+  "#tournament-people-button-list-prev"
+);
+const buttonnext = document.querySelector(
+  "#tournament-people-button-list-next"
+);
 
 const infopeople = {
   indexlistpeople: 1,
@@ -7,9 +13,9 @@ const infopeople = {
     [
       {
         id: 1,
-        name: "Хозе-Рауль Капабланка",
+        name: "Александр Федорович",
         img: "./img/People.png",
-        description: "Чемпион мира по шахматам",
+        description: "Разработчик",
       },
       {
         id: 2,
@@ -101,7 +107,7 @@ const infopeople = {
         id: 15,
         name: "Александр Алехин2",
         img: "./img/People.png",
-        description: "Чемпион мира по шахматам",
+        description: "Твой батя",
       },
     ],
     [
@@ -130,22 +136,27 @@ const infopeople = {
 listpeoplerender(infopeople.indexlistpeople);
 
 function listpeopleprev() {
-  if (infopeople.indexlistpeople > 1) {
-    infopeople.indexlistpeople--;
+  infopeople.indexlistpeople--;
 
-    listpeoplerender(infopeople.indexlistpeople);
-  }
+  listpeoplerender(infopeople.indexlistpeople);
 }
 
 function listpeoplenext() {
-  if (infopeople.indexlistpeople < infopeople.listpeople.length) {
-    infopeople.indexlistpeople++;
+  infopeople.indexlistpeople++;
 
-    listpeoplerender(infopeople.indexlistpeople);
-  }
+  listpeoplerender(infopeople.indexlistpeople);
 }
 
 function listpeoplerender(index) {
+  buttonprev.removeAttribute("disabled");
+  buttonnext.removeAttribute("disabled");
+
+  if (infopeople.indexlistpeople == 1) {
+    buttonprev.setAttribute("disabled", true);
+  } else if (infopeople.indexlistpeople == infopeople.listpeople.length) {
+    buttonnext.setAttribute("disabled", true);
+  }
+
   peopleinfolist.innerHTML = `<div class="tournament-people-info-list" data-aos="zoom-in" data-aos-delay="300" data-aos-anchor-placement="top-bottom">${index} <span class="opacity-[0.6]">/ ${infopeople.listpeople.length}</span></div>`;
   divpeople.innerHTML = "";
 
@@ -153,6 +164,8 @@ function listpeoplerender(index) {
 
   for (let i = 0; i < Allpeople.length; i++) {
     const people = Allpeople[i];
+
+    //tournament-people-div
 
     const div = document.createElement("div");
     div.classList.add("tournament-people-info");
@@ -169,9 +182,14 @@ function listpeoplerender(index) {
     const h5 = document.createElement("h4");
     h5.textContent = people.name;
 
+    const divspan = document.createElement("div");
+    divspan.classList.add("tournament-people-div-description");
+
     const span = document.createElement("span");
     span.classList.add("tournament-people-description");
     span.textContent = people.description;
+
+    divspan.appendChild(span);
 
     const a = document.createElement("a");
     a.href = "https://vk.com/shishkin666";
@@ -184,7 +202,7 @@ function listpeoplerender(index) {
     a.appendChild(button);
 
     div2.appendChild(h5);
-    div2.appendChild(span);
+    div2.appendChild(divspan);
 
     div.appendChild(img);
     div.appendChild(div2);

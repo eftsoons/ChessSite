@@ -1,0 +1,199 @@
+@import url("./style.css");
+
+@media (max-width: 1270px) {
+  main {
+    padding-inline: 40px;
+  }
+}
+
+@media (max-width: 1206px) {
+  body {
+    --font-size-h1: 50px;
+    --font-size-h2: 32px;
+    --font-size-h3: 30px;
+    --font-size-normal2: 16px;
+    --font-size-a: 16px;
+  }
+
+  .stages-transformation {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .stages-transformation-container-air {
+    width: 200px;
+    bottom: 200px;
+    top: -20px;
+    left: calc(100% - 176px);
+  }
+
+  .stages-transformation-text2 {
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 1100px) {
+  body {
+    --font-size-h4: 20px;
+  }
+
+  .table-motivation {
+    flex-direction: column;
+    gap: 20px;
+
+    img {
+      height: 500px;
+      order: 2;
+    }
+  }
+
+  .table-motivation-description {
+    gap: 20px;
+    text-align: center;
+  }
+
+  .tournament-people-img {
+    width: 250px;
+  }
+}
+
+@media (max-width: 1024px) {
+  body {
+    --font-size-h1: 40px;
+    --font-size-h4: 18px;
+  }
+
+  .motivation-img {
+    width: 354px;
+    height: 200px;
+  }
+
+  .header-text {
+    h1 {
+      text-align: start !important;
+    }
+  }
+
+  .tournament-people-img {
+    width: 200px;
+  }
+}
+
+@media (max-width: 850px) {
+  body {
+    --font-size-h1: 35px;
+    --font-size-h2: 27px;
+    --font-size-h3: 25px;
+    --font-size-description: 16px;
+  }
+
+  .motivation-img {
+    width: 304px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    --font-size-normal: 16px;
+    --font-size-h1: 25px;
+    --font-size-h2: 18px;
+    --font-size-h3: 15px;
+    --font-size-button: 12px;
+    --font-size-h4: 16px;
+  }
+
+  .header-container {
+    width: 50%;
+  }
+
+  .header-container-main {
+    padding-left: 26px;
+  }
+
+  .header-description {
+    text-align: start;
+  }
+
+  button {
+    padding: 8px;
+  }
+
+  .motivation {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .motivation-img {
+    width: 304px;
+    height: 150px;
+  }
+
+  .tournament-people-img {
+    width: 150px;
+  }
+}
+
+@media (max-width: 660px) {
+  body {
+    --font-size-h1: 25px;
+    --font-size-a: 14px;
+    --font-size-normal: 14px;
+    --font-size-normal2: 12px;
+    --font-size-a: 12px;
+    --font-size-h4: 14px;
+  }
+
+  .header-container {
+    width: 99%;
+  }
+
+  .header-container-main {
+    padding: 26px 30px;
+  }
+
+  .header-description {
+    text-align: start;
+  }
+
+  button {
+    padding: 8px;
+  }
+
+  main {
+    gap: 30px;
+    padding: 25px;
+  }
+
+  .tournament {
+    margin-top: 50px;
+  }
+
+  .tournament-people-button-list {
+    height: 33px;
+    width: 33px;
+  }
+
+  .tournament-people-img {
+    width: 100px;
+  }
+}
+
+@media (max-width: 500px) {
+  body {
+    --font-size-normal2: 10px;
+  }
+
+  .stages-transformation-container-text {
+    width: 100%;
+  }
+
+  .stages-transformation-container-air-div {
+    display: none;
+  }
+
+  .tournament-people-img {
+    width: 80px;
+  }
+}

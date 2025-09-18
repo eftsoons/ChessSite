@@ -146,7 +146,7 @@ function listpeoplenext() {
 }
 
 function listpeoplerender(index) {
-  peopleinfolist.textContent = `${index}/${infopeople.listpeople.length}`;
+  peopleinfolist.innerHTML = `<div class="tournament-people-info-list" data-aos="zoom-in" data-aos-delay="300" data-aos-anchor-placement="top-bottom">${index} <span class="opacity-[0.6]">/ ${infopeople.listpeople.length}</span></div>`;
   divpeople.innerHTML = "";
 
   const Allpeople = infopeople.listpeople[index - 1];
@@ -157,67 +157,39 @@ function listpeoplerender(index) {
     const div = document.createElement("div");
     div.classList.add("tournament-people-info");
     div.id = people.id;
+    div.setAttribute("data-aos", "fade-up");
 
     const img = document.createElement("img");
     img.classList.add("tournament-people-img");
     img.src = people.img;
 
-    const h5 = document.createElement("h5");
+    const div2 = document.createElement("div");
+    div2.classList.add("tournament-people-info-description");
+
+    const h5 = document.createElement("h4");
     h5.textContent = people.name;
 
     const span = document.createElement("span");
     span.classList.add("tournament-people-description");
     span.textContent = people.description;
 
+    const a = document.createElement("a");
+    a.href = "https://vk.com/shishkin666";
+    a.target = "_blank";
+
     const button = document.createElement("button");
     button.classList.add("tournament-people-button");
     button.textContent = "Подробнее";
 
+    a.appendChild(button);
+
+    div2.appendChild(h5);
+    div2.appendChild(span);
+
     div.appendChild(img);
-    div.appendChild(h5);
-    div.appendChild(span);
-    div.appendChild(button);
+    div.appendChild(div2);
+    div.appendChild(a);
 
     divpeople.appendChild(div);
   }
 }
-
-function test() {
-  const funcs = [
-    (x) => Math.pow(x, 2) - 3 * x + 2, // 0.99993896484375
-    (x) => Math.pow(x, 3) + x - 1, // 0.68231201171875
-    (x) => Math.pow(Math.E, -x) - x, // 0.567138671875
-    (x) => Math.cos(x) - x, // 0.7391357421875
-  ];
-
-  return funcs.map((func) => {
-    let a = 0;
-    let b = 1;
-
-    const sigma = 0.0001;
-
-    let mid = a - (a - b) / 2;
-
-    for (let i = 0; i < 1000 && Math.abs(func(mid)) > sigma; i++) {
-      mid = a - (a - b) / 2;
-
-      //   console.log(
-      //     `${a} ${b} середина: ${mid} значение функции: ${func(mid)} шаг: ${
-      //       i + 1
-      //     }`
-      //   );
-
-      if (func(mid) * func(a) <= 0) {
-        b = mid;
-      } else {
-        a = mid;
-      }
-
-      mid = a - (a - b) / 2;
-    }
-
-    return { func: func, mid: mid };
-  });
-}
-
-console.log(test());

@@ -1,0 +1,422 @@
+@import url("./animation.css");
+
+* {
+  padding: 0;
+  margin: 0;
+  scrollbar-width: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+html,
+body {
+  height: 100%;
+  position: relative;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  --font-size-normal: 16px;
+  --font-size-normal2: 20px;
+  --font-size-h1: 60px;
+  --font-size-h2: 54px;
+  --font-size-h3: 36px;
+  --font-size-h4: 24px;
+  --font-size-h5: 22px;
+  --font-size-description: 18px;
+  --font-size-button: 16px;
+  --font-size-a: 20px;
+  --footer-bg: rgba(233, 222, 212, 1);
+  --font-color: rgba(255, 255, 255, 1);
+  --font-color-black: #313131;
+  --font-color-red: rgba(245, 73, 50, 1);
+  --font-color-blue: #3057a2;
+  --border-color: rgba(208, 208, 208, 1);
+  --font-button-bg-black: rgba(31, 31, 31, 1);
+  --font-color-black2: rgba(49, 49, 49, 1);
+  --font-color-blue2: rgba(48, 87, 162, 1);
+}
+
+header {
+  position: relative;
+
+  img {
+    object-fit: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: calc(100vh - 58px);
+  }
+}
+
+.header-container-main {
+  position: absolute;
+
+  height: 100%;
+  width: 100%;
+
+  padding: 26px 0px 60px 60px;
+}
+
+.header-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45%;
+  height: 100%;
+}
+
+.header-description {
+  font-family: "Golos Text";
+  font-style: normal;
+  font-weight: 400;
+  font-size: var(--font-size-description);
+  line-height: 130%;
+  text-align: center;
+  font-feature-settings: "pnum" on, "lnum" on;
+  color: var(--font-color-black);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  padding-block: 100px;
+  padding-inline: 72px;
+}
+
+table {
+  border-collapse: collapse;
+  border-style: hidden;
+}
+
+th,
+td {
+  padding: 12px 14px;
+  border: 2px solid var(--border-color);
+  text-align: start;
+  gap: 10px;
+  white-space: nowrap;
+}
+
+th {
+  font-family: "Golos Text";
+  font-style: normal;
+  font-weight: 400;
+  font-size: var(--font-size-normal2);
+  line-height: 120%;
+  font-feature-settings: "pnum" on, "lnum" on;
+  color: var(--font-color-black);
+  opacity: 0.7;
+}
+
+td {
+  font-family: "Golos Text";
+  font-style: normal;
+  font-weight: 600;
+  font-size: var(--font-size-normal2);
+  line-height: 120%;
+  font-feature-settings: "pnum" on, "lnum" on;
+  color: var(--font-color-black);
+}
+
+footer {
+  height: 100%;
+  background-color: var(--footer-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  span {
+    font-family: "Golos Text";
+    font-style: normal;
+    font-weight: 400;
+    font-size: var(--font-size-normal);
+    line-height: 120%;
+    /* or 19px */
+    font-feature-settings: "pnum" on, "lnum" on;
+
+    color: var(--font-color-black);
+
+    opacity: 0.6;
+
+    margin-inline: 60px;
+    margin-top: 40px;
+    margin-bottom: 80px;
+  }
+}
+
+h1 {
+  font-family: "Merriweather";
+  font-style: normal;
+  font-weight: 400;
+  font-size: var(--font-size-h1);
+  line-height: 110%;
+  text-transform: uppercase;
+  font-feature-settings: "pnum" on, "lnum" on;
+  color: var(--font-color-black);
+}
+
+h2 {
+  font-family: "Merriweather";
+  font-style: normal;
+  font-weight: 400;
+  font-size: var(--font-size-h2);
+  line-height: 135%;
+  text-transform: uppercase;
+  font-feature-settings: "pnum" on, "lnum" on;
+  color: var(--font-color-black);
+}
+
+h3 {
+  font-family: "Merriweather";
+  font-style: normal;
+  font-weight: 400;
+  font-size: var(--font-size-h3);
+  line-height: 120%;
+  text-transform: uppercase;
+  font-feature-settings: "pnum" on, "lnum" on;
+  color: var(--font-color-black);
+}
+
+h4 {
+  font-family: "Golos Text";
+  font-style: normal;
+  font-weight: 600;
+  font-size: var(--font-size-h4);
+  line-height: 120%;
+  font-feature-settings: "pnum" on, "lnum" on;
+  color: var(--font-color-black2);
+}
+
+h5 {
+  font-family: "Merriweather";
+  font-style: normal;
+  font-weight: 400;
+  font-size: var(--font-size-h5);
+  line-height: 110%;
+  text-align: right;
+  text-transform: uppercase;
+  font-feature-settings: "pnum" on, "lnum" on;
+  color: var(--font-color);
+  white-space: nowrap;
+}
+
+a {
+  font-family: "Golos Text";
+  font-style: normal;
+  font-weight: 400;
+  font-size: var(--font-size-a);
+  line-height: 120%;
+  font-feature-settings: "pnum" on, "lnum" on;
+  color: var(--font-color-blue);
+  cursor: pointer;
+}
+
+button {
+  font-family: "Golos Text";
+  font-style: normal;
+  font-weight: 500;
+  font-size: var(--font-size-button);
+  line-height: 130%;
+  font-feature-settings: "pnum" on, "lnum" on;
+  color: var(--font-color);
+  text-align: center;
+  padding: 20px;
+  border-radius: 66px;
+}
+
+.motivation {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  align-items: center;
+}
+
+.motivation-img {
+  width: 394px;
+  height: 250px;
+  object-fit: contain;
+}
+
+.table-motivation {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+
+  img {
+    object-fit: contain;
+  }
+}
+
+.table-motivation-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.line-through {
+  text-decoration: line-through var(--font-color-red) 2px;
+}
+
+.red {
+  color: var(--font-color-red);
+}
+
+.linea-chess-motivation {
+  background-color: var(--font-color-red);
+  padding: 18px 12px;
+  width: 100%;
+  display: flex;
+}
+
+.linea-chess-motivation-content {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  animation: animation-linea-chess-motivation 10s infinite linear;
+  padding-right: 12px;
+  left: 0%;
+}
+
+.linea-chess-motivation-divsvg {
+  display: flex;
+}
+
+.stages-transformation {
+  display: grid;
+  grid-template-areas:
+    ". . b"
+    ". . b"
+    ". c c";
+  gap: 20px;
+}
+
+.stages-transformation-container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  font-family: "Golos Text";
+  font-style: normal;
+  font-weight: 500;
+  font-size: var(--font-size-normal2);
+  line-height: 120%;
+  font-feature-settings: "pnum" on, "lnum" on;
+  color: var(--font-color-black2);
+  background-image: url("../img/BackgroundGridContainer.png");
+}
+
+.stages-transformation-container-number {
+  display: flex;
+  align-items: start;
+
+  span {
+    height: 36px;
+    width: 36px;
+    background-color: var(--font-color);
+    color: var(--font-color-black2);
+    border-radius: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.stages-transformation-container-air {
+  position: absolute;
+  top: 0;
+  width: 374px;
+  bottom: 200px;
+  top: -75px;
+  left: calc(100% - 310px);
+}
+
+.stages-transformation-container-text {
+  display: flex;
+  gap: 20px;
+  width: 70%;
+}
+
+.stages-transformation-container-air-div {
+  width: 40%;
+}
+
+.stages-transformation-text2 {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.tournament {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  margin-top: 128px;
+}
+
+.tournament-people {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.tournament-people-info-list {
+  font-family: "Golos Text";
+  font-style: normal;
+  font-weight: 400;
+  font-size: var(--font-size-normal);
+  line-height: 120%;
+  font-feature-settings: "pnum" on, "lnum" on;
+  color: var(--font-color-black2);
+}
+
+.tournament-people-button-list {
+  background-color: var(--font-color-black2);
+  height: 44px;
+  width: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.tournament-people-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.tournament-people-info-description {
+  text-align: center;
+}
+
+.tournament-people-description {
+  font-family: "Golos Text";
+  font-style: normal;
+  font-weight: 400;
+  font-size: var(--font-size-normal2);
+  line-height: 120%;
+  font-feature-settings: "pnum" on, "lnum" on;
+  color: var(--font-color-black);
+  opacity: 0.6;
+}
+
+.tournament-people-button {
+  font-family: "Golos Text";
+  font-style: normal;
+  font-weight: 500;
+  font-size: var(--font-size-normal);
+  line-height: 120%;
+  color: var(--font-color-blue);
+  border: 1px var(--font-color-blue) solid;
+  padding: 12px;
+}

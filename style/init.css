@@ -220,6 +220,7 @@
     background-color: var(--font-button-bg-black);
     width: 100%;
     color: var(--font-color);
+    border: none;
   }
 }
 

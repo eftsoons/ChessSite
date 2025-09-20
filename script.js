@@ -1,13 +1,4 @@
-const setVh = () => {
-  document.body.style.setProperty(
-    "--viemport-height",
-    `${window.innerHeight}px`
-  );
-};
-
-setVh();
-
-window.addEventListener("resize", setVh);
+document.body.style.setProperty("--viemport-height", `${window.innerHeight}px`);
 
 const divpeople = document.querySelector(".tournament-people");
 const peopleinfolist = document.querySelector(".tournament-people-info-list");

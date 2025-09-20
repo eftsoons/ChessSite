@@ -15,10 +15,6 @@
     background-color: var(--color-button-white);
   }
 
-  .tournament-people-button-list:disabled {
-    background-color: var(--color-button-gray);
-  }
-
   .tournament-people-button:hover {
     background-color: var(--font-color-blue2);
     color: var(--font-color);

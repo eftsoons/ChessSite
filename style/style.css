@@ -408,6 +408,10 @@ button {
   padding: 0;
 }
 
+.tournament-people-button-list:disabled {
+  background-color: var(--color-button-gray);
+}
+
 .tournament-people-info {
   width: 100%;
   display: flex;

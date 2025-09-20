@@ -52,7 +52,7 @@ header {
     object-fit: cover;
     background-repeat: no-repeat;
     width: 100%;
-    height: calc(100vh - 60.203px - env(safe-area-inset-bottom));
+    height: calc(var(--viemport-height) - 60.203px);
   }
 }
 

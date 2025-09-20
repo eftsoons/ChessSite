@@ -1,7 +1,13 @@
-const xml = new XMLHttpRequest();
-xml.open("GET", "./listpeople.json", false);
-xml.send();
-const listpeople = JSON.parse(xml.responseText);
+const setVh = () => {
+  document.body.style.setProperty(
+    "--viemport-height",
+    `${window.innerHeight}px`
+  );
+};
+
+setVh();
+
+window.addEventListener("resize", setVh);
 
 const divpeople = document.querySelector(".tournament-people");
 const peopleinfolist = document.querySelector(".tournament-people-info-list");
@@ -11,6 +17,11 @@ const buttonprev = document.querySelector(
 const buttonnext = document.querySelector(
   "#tournament-people-button-list-next"
 );
+
+const xml = new XMLHttpRequest();
+xml.open("GET", "./listpeople.json", false);
+xml.send();
+const listpeople = JSON.parse(xml.responseText);
 
 const infopeople = {
   indexlistpeople: 1,

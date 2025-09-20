@@ -1,3 +1,8 @@
+const xml = new XMLHttpRequest();
+xml.open("GET", "./listpeople.json", false);
+xml.send();
+const listpeople = JSON.parse(xml.responseText);
+
 const divpeople = document.querySelector(".tournament-people");
 const peopleinfolist = document.querySelector(".tournament-people-info-list");
 const buttonprev = document.querySelector(
@@ -9,128 +14,7 @@ const buttonnext = document.querySelector(
 
 const infopeople = {
   indexlistpeople: 1,
-  listpeople: [
-    [
-      {
-        id: 1,
-        name: "Александр Федорович",
-        img: "./img/People.png",
-        description: "Разработчик",
-      },
-      {
-        id: 2,
-        name: "Эммануил Ласкер",
-        img: "./img/People.png",
-        description: "Чемпион мира по шахматам",
-      },
-      {
-        id: 3,
-        name: "Александр Алехин",
-        img: "./img/People.png",
-        description: "Чемпион мира по шахматам",
-      },
-    ],
-    [
-      {
-        id: 4,
-        name: "Хозе-Рауль Капабланка2",
-        img: "./img/People.png",
-        description: "Чемпион мира по шахматам",
-      },
-      {
-        id: 5,
-        name: "Эммануил Ласкер2",
-        img: "./img/People.png",
-        description: "Чемпион мира по шахматам",
-      },
-      {
-        id: 6,
-        name: "Александр Алехин2",
-        img: "./img/People.png",
-        description: "Чемпион мира по шахматам",
-      },
-    ],
-    [
-      {
-        id: 7,
-        name: "Хозе-Рауль Капабланка2",
-        img: "./img/People.png",
-        description: "Чемпион мира по шахматам",
-      },
-      {
-        id: 8,
-        name: "Эммануил Ласкер2",
-        img: "./img/People.png",
-        description: "Чемпион мира по шахматам",
-      },
-      {
-        id: 9,
-        name: "Александр Алехин2",
-        img: "./img/People.png",
-        description: "Чемпион мира по шахматам",
-      },
-    ],
-    [
-      {
-        id: 10,
-        name: "Хозе-Рауль Капабланка2",
-        img: "./img/People.png",
-        description: "Чемпион мира по шахматам",
-      },
-      {
-        id: 11,
-        name: "Эммануил Ласкер2",
-        img: "./img/People.png",
-        description: "Чемпион мира по шахматам",
-      },
-      {
-        id: 12,
-        name: "Александр Алехин2",
-        img: "./img/People.png",
-        description: "Чемпион мира по шахматам",
-      },
-    ],
-    [
-      {
-        id: 13,
-        name: "Хозе-Рауль Капабланка2",
-        img: "./img/People.png",
-        description: "Чемпион мира по шахматам",
-      },
-      {
-        id: 14,
-        name: "Эммануил Ласкер2",
-        img: "./img/People.png",
-        description: "Чемпион мира по шахматам",
-      },
-      {
-        id: 15,
-        name: "Александр Алехин2",
-        img: "./img/People.png",
-        description: "Твой батя",
-      },
-    ],
-    [
-      {
-        id: 16,
-        name: "Хозе-Рауль Капабланка2",
-        img: "./img/People.png",
-        description: "Чемпион мира по шахматам",
-      },
-      {
-        id: 17,
-        name: "Эммануил Ласкер2",
-        img: "./img/People.png",
-        description: "Чемпион мира по шахматам",
-      },
-      {
-        id: 18,
-        name: "Александр Алехин2",
-        img: "./img/People.png",
-        description: "Чемпион мира по шахматам",
-      },
-    ],
-  ],
+  listpeople: listpeople,
 };
 
 listpeoplerender(infopeople.indexlistpeople);

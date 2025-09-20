@@ -2,18 +2,58 @@
   [
     {
       "id": 1,
+      "name": "Александр Федорович",
+      "img": "./img/People.png",
+      "description": "Разработчик"
+    },
+    {
+      "id": 2,
+      "name": "Марина Сергеевна",
+      "img": "./img/People.png",
+      "description": "Дизайнер"
+    },
+    {
+      "id": 3,
+      "name": "Игорь Викторович",
+      "img": "./img/People.png",
+      "description": "Тестировщик"
+    }
+  ],
+  [
+    {
+      "id": 4,
+      "name": "Елена Павловна",
+      "img": "./img/People.png",
+      "description": "Менеджер проекта"
+    },
+    {
+      "id": 5,
+      "name": "Дмитрий Николаевич",
+      "img": "./img/People.png",
+      "description": "Бэкенд разработчик"
+    },
+    {
+      "id": 6,
+      "name": "Ольга Михайловна",
+      "img": "./img/People.png",
+      "description": "Фронтенд разработчик"
+    }
+  ],
+  [
+    {
+      "id": 7,
       "name": "Хозе-Рауль Капабланка",
       "img": "./img/People.png",
       "description": "Чемпион мира по шахматам"
     },
     {
-      "id": 2,
+      "id": 8,
       "name": "Эммануил Ласкер",
       "img": "./img/People.png",
       "description": "Чемпион мира по шахматам"
     },
     {
-      "id": 3,
+      "id": 9,
       "name": "Александр Алехин",
       "img": "./img/People.png",
       "description": "Чемпион мира по шахматам"
@@ -21,102 +61,62 @@
   ],
   [
     {
-      "id": 4,
-      "name": "Хозе-Рауль Капабланка2",
-      "img": "./img/People.png",
-      "description": "Чемпион мира по шахматам"
-    },
-    {
-      "id": 5,
-      "name": "Эммануил Ласкер2",
-      "img": "./img/People.png",
-      "description": "Чемпион мира по шахматам"
-    },
-    {
-      "id": 6,
-      "name": "Александр Алехин2",
-      "img": "./img/People.png",
-      "description": "Чемпион мира по шахматам"
-    }
-  ],
-  [
-    {
-      "id": 7,
-      "name": "Хозе-Рауль Капабланка2",
-      "img": "./img/People.png",
-      "description": "Чемпион мира по шахматам"
-    },
-    {
-      "id": 8,
-      "name": "Эммануил Ласкер2",
-      "img": "./img/People.png",
-      "description": "Чемпион мира по шахматам"
-    },
-    {
-      "id": 9,
-      "name": "Александр Алехин2",
-      "img": "./img/People.png",
-      "description": "Чемпион мира по шахматам"
-    }
-  ],
-  [
-    {
       "id": 10,
-      "name": "Хозе-Рауль Капабланка2",
+      "name": "Наталья Борисовна",
       "img": "./img/People.png",
-      "description": "Чемпион мира по шахматам"
+      "description": "Контент-менеджер"
     },
     {
       "id": 11,
-      "name": "Эммануил Ласкер2",
+      "name": "Константин Юрьевич",
       "img": "./img/People.png",
-      "description": "Чемпион мира по шахматам"
+      "description": "Инженер по качеству"
     },
     {
       "id": 12,
-      "name": "Александр Алехин2",
+      "name": "Анна Владимировна",
       "img": "./img/People.png",
-      "description": "Чемпион мира по шахматам"
+      "description": "Маркетолог"
     }
   ],
   [
     {
       "id": 13,
-      "name": "Хозе-Рауль Капабланка2",
+      "name": "Максим Петрович",
       "img": "./img/People.png",
-      "description": "Чемпион мира по шахматам"
+      "description": "Секьюрити инженер"
     },
     {
       "id": 14,
-      "name": "Эммануил Ласкер2",
+      "name": "Юлия Андреевна",
       "img": "./img/People.png",
-      "description": "Чемпион мира по шахматам"
+      "description": "HR специалист"
     },
     {
       "id": 15,
-      "name": "Александр Алехин2",
+      "name": "Андрей Олегович",
       "img": "./img/People.png",
-      "description": "Чемпион мира по шахматам"
+      "description": "Product owner"
     }
   ],
   [
     {
       "id": 16,
-      "name": "Хозе-Рауль Капабланка2",
+      "name": "Екатерина Сергеевна",
       "img": "./img/People.png",
-      "description": "Чемпион мира по шахматам"
+      "description": "UX исследователь"
     },
     {
       "id": 17,
-      "name": "Эммануил Ласкер2",
+      "name": "Роман Геннадьевич",
       "img": "./img/People.png",
-      "description": "Чемпион мира по шахматам"
+      "description": "Database администратор"
     },
     {
       "id": 18,
-      "name": "Александр Алехин2",
+      "name": "Виктория Олеговна",
       "img": "./img/People.png",
-      "description": "Чемпион мира по шахматам"
+      "description": "Координатор"
     }
   ]
 ]

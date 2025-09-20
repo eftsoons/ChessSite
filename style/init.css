@@ -219,6 +219,12 @@
   .stages-transformation-text2 {
     gap: 5px;
   }
+
+  .button-info {
+    background-color: var(--font-button-bg-black);
+    width: 100%;
+    color: var(--font-color);
+  }
 }
 
 @media (max-width: 500px) {
@@ -246,5 +252,11 @@
   .motivation-img {
     width: 324px;
     height: 180px;
+  }
+}
+
+@media (max-width: 375px) {
+  body {
+    --font-size-h3: 13px;
   }
 }
